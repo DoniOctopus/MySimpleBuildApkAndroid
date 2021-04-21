@@ -5,7 +5,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="${titleName}"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyZeplinApp">
@@ -14,7 +14,8 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <data android:scheme="https" android:host="${hostName}"/>
+                <action android:name="${applicationId}.TRANSMOGRIFY" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

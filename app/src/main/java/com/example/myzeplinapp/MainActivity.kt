@@ -8,7 +8,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        callService(BuildConfig.BASE_URL)
+
     }
 
     fun callService(url:String){

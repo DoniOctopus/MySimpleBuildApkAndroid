@@ -9,6 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.myzeplinapp"
+        manifestPlaceholders = [hostName:"com.example.myzeplinapp"]
         minSdkVersion 28
         targetSdkVersion 30
         versionCode 1
@@ -27,12 +28,14 @@ android {
     flavorDimensions"default"
     productFlavors{
         free{
-        applicationId "com.example.myzeplinapp.free"
-        buildConfigField("String","BASE_URL","\"http://www.freeapp.com\"")
+        applicationIdSuffix ".free"
+        manifestPlaceholders = [titleName:"myzeplinappFree"]
+//        buildConfigField("String","BASE_URL","\"http://www.freeapp.com\"")
         }
         paid{
-        applicationId "com.example.myzeplinapp.paid"
-        buildConfigField("String","BASE_URL","\"http://www.paidapp.com\"")
+        applicationIdSuffix ".paid"
+        manifestPlaceholders = [titleName:"myzeplinappPaid"]
+//        buildConfigField("String","BASE_URL","\"http://www.paidapp.com\"")
 
         }
     }
